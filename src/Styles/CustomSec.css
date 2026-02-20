@@ -1,0 +1,255 @@
+/* Custom Solutions Section */
+.custom-section {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9F7FF 100%);
+  padding: 100px 20px;
+}
+
+.custom-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.custom-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-header h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.custom-header h3 .highlight {
+  color: #5F28FD;
+  position: relative;
+  display: inline-block;
+}
+
+.custom-header h3 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5F28FD, transparent);
+  border-radius: 4px;
+}
+
+.custom-description {
+  text-align: center;
+  margin-bottom: 70px;
+  animation: slideUp 0.8s ease-out 0.1s backwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-description p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Custom Solution Cards */
+.custom-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  animation: staggerIn 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes staggerIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 35px;
+  text-align: center;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  animation: fadeInUp 0.6s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.custom-card:nth-child(1) { animation-delay: 0.1s; }
+.custom-card:nth-child(2) { animation-delay: 0.2s; }
+.custom-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 60px rgba(95, 40, 253, 0.12);
+  border-color: #5F28FD;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9F7FF 100%);
+}
+
+.custom-card img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 12px rgba(95, 40, 253, 0.1));
+}
+
+.custom-card:hover img {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 8px 20px rgba(95, 40, 253, 0.2));
+}
+
+.custom-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.custom-card:hover h3 {
+  color: #5F28FD;
+}
+
+.custom-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .custom-section {
+    padding: 80px 20px;
+  }
+
+  .custom-header h3 {
+    font-size: 2rem;
+  }
+
+  .custom-description p {
+    font-size: 1.1rem;
+  }
+
+  .custom-cards {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-section {
+    padding: 60px 20px;
+  }
+
+  .custom-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .custom-description p {
+    font-size: 1rem;
+  }
+
+  .custom-cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .custom-card {
+    padding: 30px 25px;
+  }
+
+  .custom-card img {
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
+
+  .custom-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-section {
+    padding: 50px 15px;
+  }
+
+  .custom-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .custom-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .custom-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .custom-card {
+    padding: 25px 20px;
+  }
+
+  .custom-card img {
+    margin-bottom: 15px;
+    max-width: 200px;
+  }
+
+  .custom-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .custom-card p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,212 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(95, 40, 253, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app:hover {
+  transform: scale(1.02);
+}
+
+.app img {
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
+
+.app h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+}
+
+.app h2 span {
+  color: #5F28FD;
+  font-weight: 800;
+}
+
+.nav-tools {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-tools a {
+  text-decoration: none;
+  color: #1a1a1a;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+
+.nav-tools a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 8px;
+  left: 24px;
+  background: linear-gradient(90deg, #5F28FD, #4a1f8c);
+  transition: width 0.3s ease;
+}
+
+.nav-tools a:hover {
+  color: #5F28FD;
+}
+
+.nav-tools a:hover::before {
+  width: calc(100% - 48px);
+}
+
+.contact1-btn {
+  background: linear-gradient(135deg, #5F28FD 0%, #4a1f8c 100%);
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(95, 40, 253, 0.2);
+}
+
+.contact1-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(95, 40, 253, 0.35);
+}
+
+.contact1-btn:active {
+  transform: translateY(-1px);
+}
+
+.contact1-btn a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 40px;
+    height: 70px;
+  }
+
+  .nav-tools a {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  .contact1-btn {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+    height: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .app h2 {
+    font-size: 20px;
+  }
+
+  .app img {
+    height: 30px;
+  }
+
+  .nav-tools {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .nav-tools a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .contact1-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .contact1-btn a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+    height: auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .app h2 {
+    font-size: 18px;
+  }
+
+  .nav-tools {
+    order: 2;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .nav-tools a {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .contact1-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
