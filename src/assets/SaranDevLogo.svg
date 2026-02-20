@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#5F28FD" opacity="0.1" stroke="#5F28FD" stroke-width="2"/>
+  
+  <!-- Main logo shape - Code brackets with initials -->
+  <g>
+    <!-- Left bracket -->
+    <path d="M 50 70 L 65 70 L 55 100 L 65 130 L 50 130" 
+          fill="none" stroke="#5F28FD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right bracket -->
+    <path d="M 150 70 L 135 70 L 145 100 L 135 130 L 150 130" 
+          fill="none" stroke="#5F28FD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Center text "SD" -->
+    <text x="100" y="115" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+          fill="#5F28FD" text-anchor="middle" dominant-baseline="middle">SD</text>
+  </g>
+  
+  <!-- Subtle underline accent -->
+  <line x1="70" y1="145" x2="130" y2="145" stroke="#5F28FD" stroke-width="2" stroke-linecap="round"/>
+</svg>

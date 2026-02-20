@@ -1,5 +1,6 @@
 export { default as OritechLogo } from "./Oritechlogo.png";
 export { default as Logo } from "./logoFrame2.png";
+export { default as SaranDevLogo } from "./SaranDevLogo.svg";
 export { default as ReactIcon } from './react.svg';
 export { default as ManIcon } from './me-ChGfspQv.svg fill.png';
 export { default as Company } from './compimg.png';

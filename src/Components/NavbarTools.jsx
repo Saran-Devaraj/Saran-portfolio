@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";  // Added this import
 import "../Styles/NavbarTools.css";  // Assuming you have a CSS file for styling
-import { OritechLogo } from "../assets";
+import { SaranDevLogo } from "../assets";
 
 function NavbarTools() {
   return (
     <div className="navbar">
       <header className="app">
-        <img src={OritechLogo} alt="Logo" />
+        <img src={SaranDevLogo} alt="SaranDev Logo" style={{ width: "50px", height: "50px" }} />
         <h2><span style={{ color: "#5F28FD" }}>Saran</span>Dev</h2>
       </header>
       <div className="nav-tools">
