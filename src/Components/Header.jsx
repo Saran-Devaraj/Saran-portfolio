@@ -21,7 +21,10 @@ function Header() {
             </div>
           </div>
           <div className="header-content-right">
-            <img src={ManIcon} alt="Man Icon" />
+            <video autoPlay muted loop style={{width: "100%", maxWidth: "500px", borderRadius: "12px"}} alt="Saran Dev Logo Animation">
+              <source src="/Initial Brand logo.mp4" type="video/mp4" />
+              <img src={ManIcon} alt="Man Icon" />
+            </video>
           </div>
         </div>
         <div>
