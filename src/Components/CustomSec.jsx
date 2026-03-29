@@ -18,14 +18,14 @@ function CustomSec() {
             <p>Building scalable applications with functional components and modern hooks.</p>
           </div>
           <div className="custom-card">
-            <img src={Custombox2} alt="Responsive Design" />
-            <h3>Responsive Design</h3>
-            <p>Creating interfaces that adapt beautifully to all device sizes and screen resolutions.</p>
+            <img src={Custombox2} alt="Secure Solutions" />
+            <h3>Secure Solutions</h3>
+            <p>Implementing robust security measures to protect your applications and data.</p>
           </div>
           <div className="custom-card">
             <img src={Custombox3} alt="User Experience" />
             <h3>User Experience</h3>
-            <p>Designing intuitive interfaces that prioritize usability and accessibility standards.</p>
+            <p>Creating intuitive interfaces that prioritize usability and accessibility standards.</p>
           </div>
         </div>
       </div>

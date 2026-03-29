@@ -1,7 +1,6 @@
-/* Dev Products / Services Section */
 .services-section {
   background: linear-gradient(180deg, #F3F0FF 0%, #EDE8FF 100%);
-  padding: 100px 20px;
+  padding: 50px 20px;
 }
 
 .services-container {
@@ -13,8 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
-  gap: 60px;
+  gap: 100px;
   flex-wrap: wrap-reverse;
   animation: fadeIn 0.8s ease-out;
 }
@@ -30,7 +28,6 @@
 
 .services-header-left {
   flex: 1;
-  min-width: 300px;
 }
 
 .services-header-left p {
@@ -38,7 +35,7 @@
   font-weight: 700;
   line-height: 1.3;
   color: #1a1a1a;
-  margin-bottom: 30px;
+  padding: auto;
 }
 
 .services-header-left p button {
@@ -61,7 +58,6 @@
 
 .services-header-right {
   flex: 1;
-  min-width: 250px;
 }
 
 .services-header-right button {
@@ -84,7 +80,6 @@
   box-shadow: 0 8px 25px rgba(95, 40, 253, 0.3);
 }
 
-/* Service Boxes */
 .serviceBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -226,7 +221,7 @@
   }
 
   .developBox img {
-    height: 180px;
+    height: 200px;
   }
 }
 
@@ -253,7 +248,7 @@
   }
 
   .developBox img {
-    height: 150px;
+    height: 180px;
   }
 
   .developBox h3 {

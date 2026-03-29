@@ -18,13 +18,13 @@ function BlogsSec() {
                     <div className="blog-card">
                         <div className="blog-image-container">
                             <img src={Blogpg1} alt="Portfolio Website" />
-                            <div className="blog-social-icons">
-                                <a href="https://instagram.com" title="Instagram"><FaInstagram /></a>
-                                <a href="https://twitter.com" title="Twitter"><FaXTwitter /></a>
-                                <a href="mailto:contact@example.com" title="Email"><MdAlternateEmail /></a>
-                                <a href="https://wa.me" title="WhatsApp"><IoLogoWhatsapp /></a>
-                                <a href="https://linkedin.com" title="LinkedIn"><RiLinkedinLine /></a>
-                            </div>
+                                <div className="blog-social-icons">
+                                    <a href="https://instagram.com" title="Instagram"><FaInstagram /></a>
+                                    <a href="https://twitter.com" title="Twitter"><FaXTwitter /></a>
+                                    <a href="mailto:contact@example.com" title="Email"><MdAlternateEmail /></a>
+                                    <a href="https://wa.me" title="WhatsApp"><IoLogoWhatsapp /></a>
+                                    <a href="https://linkedin.com" title="LinkedIn"><RiLinkedinLine /></a>
+                                </div>
                         </div>
                         <div className="blog-info">
                             <p>Portfolio Website</p>
@@ -59,7 +59,7 @@ function BlogsSec() {
                             </div>
                         </div>
                         <div className="blog-info">
-                            <p>Responsive Landing Pages</p>
+                            <p>Responsive Pages</p>
                             <p>Mobile-First Design</p>
                         </div>
                     </div>

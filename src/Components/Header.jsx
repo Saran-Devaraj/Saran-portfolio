@@ -27,13 +27,20 @@ function Header() {
             </video>
           </div>
         </div>
-        <div>
+        <div className="client-list">
           <p>Trusted by amazing clients</p>
-          <div>
-            <img src={Company} alt="Company Logo" />
-            <img src={Organization} alt="Organization Logo" />
-            <img src={Enterprise} alt="Enterprise Logo" />
-            <img src={Venture} alt="Venture Logo" />
+          <div className="client-list-wrapper">
+            <div className="client-list-logos">
+              <img src={Company} alt="Company Logo" />
+              <img src={Organization} alt="Organization Logo" />
+              <img src={Enterprise} alt="Enterprise Logo" />
+              <img src={Venture} alt="Venture Logo" />
+              {/* duplicate */}
+              <img src={Company} alt="Company Logo" />
+              <img src={Organization} alt="Organization Logo" />
+              <img src={Enterprise} alt="Enterprise Logo" />
+              <img src={Venture} alt="Venture Logo" />
+            </div>
           </div>
         </div>
       </section>

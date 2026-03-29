@@ -23,7 +23,7 @@ footer {
 
 /* ===== Main Footer Content ===== */
 .footer-main {
-  padding: 80px 40px;
+  padding: 60px 40px 40px 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   z-index: 1;
@@ -33,8 +33,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 60px;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1500px;
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -125,7 +124,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
+  width: 90px;
   height: 2px;
   background: linear-gradient(90deg, #5F28FD, transparent);
 }

@@ -10,13 +10,27 @@ import { config } from "../config/config";
 function Footer() {
   return (
     <footer className="footer-section">
-      {/* Main Footer Content */}
+        <div className="footer-newsletter-section">
+          <div className="newsletter-wrapper">
+            <h3>Subscribe to My Blog</h3>
+            <p>Get frontend development tips and insights delivered to your inbox</p>
+              <form className="newsletter-form" onSubmit={(e) => FooterHelper.handleSubmit(e)}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+        </div>
+
       <div className="footer-main">
         <div className="footer-container">
-          {/* Column 1: Brand */}
           <div className="footer-column footer-brand">
             <div className="footer-logo">
-              <h2><span className="logo-accent">Saran</span>Dev</h2>
+              <h2><span className="logo-accent">Saran</span>Devaraj</h2>
             </div>
             <p className="brand-tagline">Frontend Development & UI Design</p>
             <div className="brand-description">
@@ -67,23 +81,6 @@ function Footer() {
               <p>India</p>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Newsletter Section */}
-      <div className="footer-newsletter-section">
-        <div className="newsletter-wrapper">
-          <h3>Subscribe to My Blog</h3>
-          <p>Get frontend development tips and insights delivered to your inbox</p>
-          <form className="newsletter-form" onSubmit={(e) => FooterHelper.handleSubmit(e)}>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email address"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
         </div>
       </div>
 

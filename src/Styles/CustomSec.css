@@ -1,7 +1,6 @@
-/* Custom Solutions Section */
 .custom-section {
   background: linear-gradient(135deg, #FFFFFF 0%, #F9F7FF 100%);
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 
 .custom-container {
@@ -51,7 +50,7 @@
 
 .custom-description {
   text-align: center;
-  margin-bottom: 70px;
+  padding: 0 0 40px 0;
   animation: slideUp 0.8s ease-out 0.1s backwards;
 }
 
@@ -76,7 +75,6 @@
   letter-spacing: 0.3px;
 }
 
-/* Custom Solution Cards */
 .custom-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -126,7 +124,7 @@
 .custom-card:hover {
   transform: translateY(-15px);
   box-shadow: 0 25px 60px rgba(95, 40, 253, 0.12);
-  border-color: #5F28FD;
+  border-bottom: 3px solid #5F28FD;
   background: linear-gradient(135deg, #FFFFFF 0%, #F9F7FF 100%);
 }
 
@@ -166,7 +164,6 @@
   letter-spacing: 0.2px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .custom-section {
     padding: 80px 20px;
@@ -232,11 +229,19 @@
   }
 
   .custom-cards {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-
   .custom-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
     padding: 25px 20px;
   }
 

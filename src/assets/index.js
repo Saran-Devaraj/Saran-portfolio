@@ -9,7 +9,7 @@ export { default as Enterprise } from './enterimg.png';
 export { default as Venture } from './ventimg.png';
 
 export { default as Devbox1 } from './dev1.svg';
-export { default as Devbox2 } from './dev2.png';
+export { default as Devbox2 } from './Group.png';
 export { default as Devbox3 } from './dev3.svg';
 export { default as Devbox4 } from './dev4.png';
 
