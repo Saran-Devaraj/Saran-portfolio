@@ -17,10 +17,10 @@ export { default as Custombox1 } from './custom-img1.png';
 export { default as Custombox2 } from './secure.png';
 export { default as Custombox3 } from './custom-img3.png';
 
-export { default as Blogpg1 } from './blogimg1.jpg';
-export { default as Blogpg2 } from './blogimg2.jpg';
-export { default as Blogpg3 } from './blogimg3.jpg';
-export { default as Blogpg4 } from './blogimg4.jpg';
-export { default as Blogpg5 } from './blogimg5.jpg';
+export { default as Blogpg1 } from './portfolioimg.png';
+export { default as Blogpg2 } from './UI component.png';
+export { default as Blogpg3 } from './ResponsiveImg.png';
+export { default as Blogpg4 } from './ecommerce.png';
+export { default as Blogpg5 } from './buildingweb.png';
 
 export { default as Linkedinicon } from './in icon.png';
