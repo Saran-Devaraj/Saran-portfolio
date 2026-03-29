@@ -1,3 +1,7 @@
+import { MdOutlineDesignServices } from "react-icons/md";        // User-Centric Design
+import { MdPhoneIphone } from "react-icons/md";                   // Responsive Design
+import { PiCodeBold } from "react-icons/pi";                      // Clean Code
+import { IoRocketOutline } from "react-icons/io5";
 import React from "react";
 import "../Styles/About.css";
 import { Venture } from "../assets";
@@ -5,17 +9,17 @@ import { Venture } from "../assets";
 function About() {
   const timeline = [
     {
-      year: "2024",
+      year: "2020",
       title: "Development Journey Begins",
       description: "Started my career as a frontend developer with focus on React.js and user interface design"
     },
     {
-      year: "2024",
+      year: "2021",
       title: "First Major Project",
       description: "Built a portfolio website using React with modern responsive design principles"
     },
     {
-      year: "2025",
+      year: "2024",
       title: "UI Components Library",
       description: "Developed reusable component library including buttons, cards, modals, and form elements"
     },
@@ -31,28 +35,28 @@ function About() {
     }
   ];
 
-  const values = [
-    {
-      icon: "🎯",
-      title: "User-Centric Design",
-      description: "Creating interfaces that prioritize user needs and experiences"
-    },
-    {
-      icon: "📱",
-      title: "Responsive Design",
-      description: "Building interfaces that work flawlessly across all devices"
-    },
-    {
-      icon: "✨",
-      title: "Clean Code",
-      description: "Writing maintainable, efficient, and well-documented code"
-    },
-    {
-      icon: "🚀",
-      title: "Performance",
-      description: "Optimizing for speed, usability, and user satisfaction"
-    }
-  ];
+const values = [
+  {
+    icon: <MdOutlineDesignServices />,
+    title: "User-Centric Design",
+    description: "Creating interfaces that prioritize user needs and experiences"
+  },
+  {
+    icon: <MdPhoneIphone />,
+    title: "Responsive Design",
+    description: "Building interfaces that work flawlessly across all devices"
+  },
+  {
+    icon: <PiCodeBold />,
+    title: "Clean Code",
+    description: "Writing maintainable, efficient, and well-documented code"
+  },
+  {
+    icon: <IoRocketOutline />,
+    title: "Performance",
+    description: "Optimizing for speed, usability, and user satisfaction"
+  }
+];
 
   return (
     <div className="about-page">
