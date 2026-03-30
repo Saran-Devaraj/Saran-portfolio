@@ -40,6 +40,11 @@ function Header() {
               <img src={Organization} alt="Organization Logo" />
               <img src={Enterprise} alt="Enterprise Logo" />
               <img src={Venture} alt="Venture Logo" />
+              {/* duplicate */}
+              <img src={Company} alt="Company Logo" />
+              <img src={Organization} alt="Organization Logo" />
+              <img src={Enterprise} alt="Enterprise Logo" />
+              <img src={Venture} alt="Venture Logo" />
             </div>
           </div>
         </div>

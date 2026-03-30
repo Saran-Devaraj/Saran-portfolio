@@ -1,3 +1,4 @@
+/* ── Base navbar ── */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -119,7 +120,13 @@
   letter-spacing: 0.3px;
 }
 
-/* Responsive Design */
+/* ── Hide mobile elements on desktop ── */
+.mobile-bottom-nav,
+.mobile-contact-fab {
+  display: none;
+}
+
+/* ── Tablet 1024px ── */
 @media (max-width: 1024px) {
   .navbar {
     padding: 0 40px;
@@ -136,12 +143,18 @@
   }
 }
 
+/* ── Tablet 768px ── */
 @media (max-width: 768px) {
   .navbar {
     padding: 0 20px;
     height: 60px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .app {
+    width: auto;
+    justify-content: flex-start;
   }
 
   .app h2 {
@@ -152,61 +165,118 @@
     height: 30px;
   }
 
+  /* ── Hide desktop nav and contact on mobile ── */
   .nav-tools {
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-    justify-content: flex-start;
-    gap: 5px;
-  }
-
-  .nav-tools a {
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    display: none;
   }
 
   .contact1-btn {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+    display: none;
   }
 
-  .contact1-btn a {
-    font-size: 0.85rem;
+  /* ── Fixed bottom nav bar ── */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(95, 40, 253, 0.12);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 200;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #888;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    flex: 1;
+  }
+
+  .mobile-nav-item span {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .mobile-nav-item:hover,
+  .mobile-nav-item.active {
+    color: #5F28FD;
+    background: rgba(95, 40, 253, 0.08);
+  }
+
+  .mobile-nav-item.active svg {
+    stroke-width: 2.5;
+  }
+
+  /* ── Floating contact button ── */
+  .mobile-contact-fab {
+    display: flex;
+    position: fixed;
+    bottom: 82px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #5F28FD 0%, #4a1f8c 100%);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    z-index: 201;
+    box-shadow: 0 4px 20px rgba(95, 40, 253, 0.4);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .mobile-contact-fab:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 28px rgba(95, 40, 253, 0.5);
+  }
+
+  .mobile-contact-fab:active {
+    transform: scale(0.96);
+  }
+
+  /* ── Prevent content hiding behind bottom nav ── */
+  body {
+    padding-bottom: 65px;
   }
 }
 
+/* ── Mobile 480px ── */
 @media (max-width: 480px) {
   .navbar {
     padding: 0 15px;
-    height: auto;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .app {
-    width: 100%;
-    justify-content: space-between;
+    height: 56px;
+    flex-direction: row;
+    gap: 0;
   }
 
   .app h2 {
     font-size: 18px;
   }
 
-  .nav-tools {
-    order: 2;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+  .mobile-nav-item {
+    padding: 8px 10px;
   }
 
-  .nav-tools a {
-    padding: 6px 10px;
-    font-size: 0.8rem;
+  .mobile-contact-fab {
+    bottom: 78px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
   }
-
-  .contact1-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
+} 
