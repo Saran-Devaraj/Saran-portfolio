@@ -6,7 +6,7 @@ function CustomSec() {
     <section className="custom-section">
       <div className="custom-container">
         <div className="custom-header">
-          <h3>Frontend Development <span className="highlight">Expertise</span></h3>
+          <h3>Frontend Development <br /><span className="highlight">Expertise</span></h3>
         </div>
         <div className="custom-description">
           <p>I specialize in building responsive, user-centric interfaces with modern technologies and best practices.</p>

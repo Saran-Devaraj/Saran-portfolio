@@ -83,7 +83,7 @@
 .serviceBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: 35px;
   animation: staggerIn 0.8s ease-out 0.2s backwards;
 }
 
@@ -144,9 +144,10 @@
 }
 
 .developBox img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 250px;
+  height: auto;
+  border-radius: 6px;
+  align-self: center;
   transition: all 0.4s ease;
 }
 
@@ -238,6 +239,10 @@
     font-size: 1.3rem;
   }
 
+  .services-header-right{
+    display: none;
+  }
+
   .serviceBox {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -245,10 +250,13 @@
 
   .developBox section {
     padding: 25px;
+    /* height: 220px; */
   }
 
   .developBox img {
-    height: 180px;
+    height: auto;
+    width: 200px;
+    align-self: center;
   }
 
   .developBox h3 {

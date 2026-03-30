@@ -1,12 +1,27 @@
-import { MdOutlineDesignServices } from "react-icons/md";        // User-Centric Design
-import { MdPhoneIphone } from "react-icons/md";                   // Responsive Design
-import { PiCodeBold } from "react-icons/pi";                      // Clean Code
+import { MdOutlineDesignServices } from "react-icons/md";
+import { MdPhoneIphone } from "react-icons/md";
+import { PiCodeBold } from "react-icons/pi";
 import { IoRocketOutline } from "react-icons/io5";
-import React from "react";
+import React, { useState, useRef } from "react";
 import "../Styles/About.css";
-import { Venture } from "../assets";
 
 function About() {
+  const [activeValue, setActiveValue] = useState(0);
+  const touchStartX = useRef(0);
+  const total = 4;
+
+  const handleValueTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleValueTouchEnd = (e) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) setActiveValue((p) => (p + 1) % total);
+      else setActiveValue((p) => (p - 1 + total) % total);
+    }
+  };
+
   const timeline = [
     {
       year: "2020",
@@ -35,33 +50,45 @@ function About() {
     }
   ];
 
-const values = [
-  {
-    icon: <MdOutlineDesignServices />,
-    title: "User-Centric Design",
-    description: "Creating interfaces that prioritize user needs and experiences"
-  },
-  {
-    icon: <MdPhoneIphone />,
-    title: "Responsive Design",
-    description: "Building interfaces that work flawlessly across all devices"
-  },
-  {
-    icon: <PiCodeBold />,
-    title: "Clean Code",
-    description: "Writing maintainable, efficient, and well-documented code"
-  },
-  {
-    icon: <IoRocketOutline />,
-    title: "Performance",
-    description: "Optimizing for speed, usability, and user satisfaction"
-  }
-];
+  const values = [
+    {
+      icon: <MdOutlineDesignServices />,
+      title: "User-Centric Design",
+      description: "Creating interfaces that prioritize user needs and experiences"
+    },
+    {
+      icon: <MdPhoneIphone />,
+      title: "Responsive Design",
+      description: "Building interfaces that work flawlessly across all devices"
+    },
+    {
+      icon: <PiCodeBold />,
+      title: "Clean Code",
+      description: "Writing maintainable, efficient, and well-documented code"
+    },
+    {
+      icon: <IoRocketOutline />,
+      title: "Performance",
+      description: "Optimizing for speed, usability, and user satisfaction"
+    }
+  ];
+
+  const getValuePos = (index) => {
+    let diff = index - activeValue;
+    if (diff >  total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+    return diff;
+  };
 
   return (
     <div className="about-page">
-      {/* Hero Section */}
+
       <section className="about-hero">
+        <div className="about-hero-visual">
+          <div className="abstract-shape shape-1"></div>
+          <div className="abstract-shape shape-2"></div>
+          <div className="abstract-shape shape-3"></div>
+        </div>
         <div className="about-hero-content">
           <h1>About Me</h1>
           <p className="about-hero-subtitle">Frontend Developer & UI Enthusiast</p>
@@ -71,14 +98,8 @@ const values = [
             With a strong focus on user experience and clean code, I transform ideas into engaging digital products.
           </p>
         </div>
-        <div className="about-hero-visual">
-          <div className="abstract-shape shape-1"></div>
-          <div className="abstract-shape shape-2"></div>
-          <div className="abstract-shape shape-3"></div>
-        </div>
       </section>
 
-      {/* Story Section */}
       <section className="about-story">
         <div className="story-container">
           <div className="story-content">
@@ -88,8 +109,8 @@ const values = [
               My journey has been driven by a commitment to continuous learning and a dedication to creating exceptional digital experiences.
             </p>
             <p>
-              With hands-on experience in React.js and responsive web design, I've developed skills in component-based UI development, 
-              cross-browser compatibility, and mobile-first design principles. I believe great interfaces aren't just about aesthetics—they're 
+              With hands-on experience in React.js and responsive web design, I've developed skills in component-based UI development,
+              cross-browser compatibility, and mobile-first design principles. I believe great interfaces aren't just about aesthetics—they're
               about solving problems and creating delightful user experiences.
             </p>
           </div>
@@ -114,7 +135,6 @@ const values = [
         </div>
       </section>
 
-      {/* Timeline Section */}
       <section className="about-timeline">
         <div className="timeline-header">
           <h2>Our Journey</h2>
@@ -125,6 +145,7 @@ const values = [
             <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
               <div className="timeline-marker">{item.year}</div>
               <div className="timeline-content">
+                <span className="timeline-year-mobile">{item.year}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
@@ -133,12 +154,12 @@ const values = [
         </div>
       </section>
 
-      {/* Values Section */}
       <section className="about-values">
         <div className="values-header">
           <h2>Our Core Values</h2>
           <p>Principles that guide everything we do</p>
         </div>
+
         <div className="values-grid">
           {values.map((value, index) => (
             <div key={index} className="value-card">
@@ -148,9 +169,56 @@ const values = [
             </div>
           ))}
         </div>
+
+        <div
+          className="values-arc-swiper"
+          onTouchStart={handleValueTouchStart}
+          onTouchEnd={handleValueTouchEnd}
+        >
+          {values.map((value, index) => {
+            const pos    = getValuePos(index);
+            const absPos = Math.abs(pos);
+            if (absPos > 2) return null;
+
+            const rotate  = pos * 10;
+            const translateX = pos * 80;
+            const translateY = absPos * 20;
+            const scale   = 1 - absPos * 0.08;
+            const zIndex  = 10 - absPos;
+            const opacity = absPos > 1 ? 0.55 : 1;
+
+            return (
+              <div
+                key={index}
+                className={`value-arc-card ${pos === 0 ? "is-active" : ""}`}
+                style={{
+                  transform: `translateX(${translateX}px) translateY(${translateY}px) rotate(${rotate}deg) scale(${scale})`,
+                  zIndex,
+                  opacity,
+                  filter: absPos > 0 ? `brightness(${1 - absPos * 0.15})` : "none",
+                  transition: "all 0.4s cubic-bezier(0.34, 1.2, 0.64, 1)",
+                }}
+                onClick={() => setActiveValue(index)}
+              >
+                <div className="value-icon">{value.icon}</div>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
+              </div>
+            );
+          })}
+
+          <div className="arc-dots">
+            {values.map((_, i) => (
+              <button
+                key={i}
+                className={`arc-dot ${i === activeValue ? "active" : ""}`}
+                onClick={() => setActiveValue(i)}
+              />
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* CTA Section */}
       <section className="about-cta">
         <div className="cta-content">
           <h2>Let's Work Together</h2>
@@ -158,6 +226,7 @@ const values = [
           <button className="cta-button">Get In Touch</button>
         </div>
       </section>
+
     </div>
   );
 }

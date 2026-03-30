@@ -34,7 +34,6 @@
   line-height: 1.1;
   color: #1a1a1a;
   letter-spacing: -1.5px;
-  margin: 0;
 }
 
 .highlight-box-who{
@@ -168,11 +167,11 @@
     flex: unset;
     width: 100%;
     position: static;
-  
+    
   }
 
   .who-we-are-title p {
-    font-size: 1.rem;
+    font-size: 1.8rem;
   }
 
   .description-content p {
