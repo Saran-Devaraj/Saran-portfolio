@@ -11,7 +11,7 @@ function Navbar() {
       <div className="navbar">
         <header className="app">
           <img src={SaranDevLogo} alt="SaranDev Logo" style={{ width: "50px", height: "50px" }} />
-          <h2><span style={{ color: "#5F28FD" }}>Saran</span>Dev</h2>
+          <h2><span style={{ color: "#5F28FD" }}>Saran</span>Devaraj</h2>
         </header>
         <div className="nav-tools">
           <Link to="/home">Home</Link>

@@ -8,7 +8,7 @@ function Header() {
       <section className="hero">
         <div className="header-column">
           <div className="header-content-left">
-            <h3>Crafting Beautiful User Interfaces, <span style={{backgroundColor: "#5F28FD", color: "#fff", padding: "8px 16px", borderRadius: "8px"}}>Today</span></h3>
+            <h3>Crafting Beautiful User Interfaces, <span className="highlight-today">Today</span></h3>
             <div className="lorem">
               <p>I'm a frontend developer with a passion for building responsive, user-centric interfaces. Specializing in React.js and modern web technologies, I create engaging digital experiences that users love. Let's turn your ideas into reality with clean, functional code and exceptional design.</p>
             </div>

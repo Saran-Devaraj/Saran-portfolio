@@ -62,11 +62,14 @@
 }
 
 .header-content-left h3 span {
-  padding: 10px 20px;
-  border-radius: 10px;
+  background-color: #5F28FD;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
   display: inline-block;
   margin: 0 8px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .lorem {
@@ -321,26 +324,23 @@
 
   .header-content-left h3 {
     font-size: 1.6rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
+    display: inline;
     line-height: 1.3;
   }
 
-    .header-content-left h3 span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
+  .header-content-left h3 span {
+    display: inline;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: inherit;
+    margin: 0 4px;
+    vertical-align: middle;
     white-space: nowrap;
-    background-color: #5F28FD;
-    color: #fff;
-    padding: 4px 12px;
-    border-radius: 8px;
-    font-size: 1.4rem;
   }
 
   .lorem p {
+    padding: 15px;
+    align-items: center;
     font-size: 1rem;
     line-height: 1.6;
   }
