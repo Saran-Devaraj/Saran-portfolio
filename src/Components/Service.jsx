@@ -48,14 +48,14 @@ function Service() {
       description: "I create a detailed plan with wireframes and component structure"
     },
     {
-      step: "03",
-      title: "Design",
-      description: "I build responsive, user-centric interfaces with attention to detail"
-    },
-    {
       step: "04",
       title: "Development",
       description: "I write clean, maintainable code following best practices"
+    },
+    {
+      step: "03",
+      title: "Design",
+      description: "I build responsive, user-centric interfaces with attention to detail"
     },
     {
       step: "05",
@@ -108,7 +108,6 @@ function Service() {
 
   return (
     <div className="service-page">
-      {/* Hero Section */}
       <section className="service-hero">
         <div className="service-hero-content">
           <h1>My Services</h1>
@@ -117,7 +116,6 @@ function Service() {
         </div>
       </section>
 
-      {/* Services Grid */}
       <section className="service-showcase">
         <div className="service-container">
           <div className="services-header">
@@ -147,7 +145,6 @@ function Service() {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="service-process">
         <div className="process-container">
           <div className="process-header">
@@ -160,14 +157,23 @@ function Service() {
                 <div className="process-step">{item.step}</div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                {index < process.length - 1 && <div className="process-arrow">→</div>}
+                {index < process.length - 1 && (
+                  <div className="process-arrow">→</div>
+                )}
+                {index < process.length - 1 && (
+                  <div className="process-arrow-down">↓</div>
+                )}
+                {index === 0 && <div className="process-arrow arr-right">→</div>}
+                {index === 1 && <div className="process-arrow arr-down">↓</div>}
+                {index === 2 && <div className="process-arrow arr-down">↓</div>}
+                {index === 3 && <div className="process-arrow arr-left">←</div>}
+                {index === 4 && <div className="process-arrow arr-right">→</div>}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="service-faq">
         <div className="faq-container">
           <div className="faq-header">
@@ -177,7 +183,7 @@ function Service() {
           <div className="faq-grid">
             {faqs.map((faq) => (
               <div key={faq.id} className={`faq-item ${expandedFaq === faq.id ? 'expanded' : ''}`}>
-                <button 
+                <button
                   className="faq-question"
                   onClick={() => toggleFaq(faq.id)}
                 >
@@ -195,7 +201,6 @@ function Service() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="service-cta">
         <div className="cta-content">
           <h2>Ready to Start Your Project?</h2>

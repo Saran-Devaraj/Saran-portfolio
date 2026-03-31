@@ -1,7 +1,8 @@
 import { Home, User, BookOpen, Briefcase, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { SaranDevLogo } from "../assets";
+import { SaranDevLogo, servicesicon } from "../assets";
 import "../Styles/NavbarTools.css";
+
 
 function Navbar() {
   const location = useLocation();
@@ -24,7 +25,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* ── Mobile bottom nav bar ── */}
       <nav className="mobile-bottom-nav">
         <Link to="/home" className={`mobile-nav-item ${location.pathname === "/home" ? "active" : ""}`}>
           <Home size={22} />
@@ -39,7 +39,7 @@ function Navbar() {
           <span>Blog</span>
         </Link>
         <Link to="/service" className={`mobile-nav-item ${location.pathname === "/service" ? "active" : ""}`}>
-          <Briefcase size={22} />
+          <img src={servicesicon} alt="Service" className="mobile-nav-icon-img"/>
           <span>Service</span>
         </Link>
       </nav>

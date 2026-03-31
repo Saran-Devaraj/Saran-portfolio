@@ -24,3 +24,4 @@ export { default as Blogpg4 } from './ecommerce.png';
 export { default as Blogpg5 } from './buildingweb.png';
 
 export { default as Linkedinicon } from './in icon.png';
+export { default as servicesicon } from './supply-chain.png';

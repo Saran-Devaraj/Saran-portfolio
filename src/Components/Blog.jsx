@@ -80,7 +80,6 @@ function Blog() {
 
   return (
     <div className="blog-page">
-      {/* Hero Section */}
       <section className="blog-hero">
         <div className="blog-hero-content">
           <h1>Blog & Articles</h1>
@@ -89,7 +88,6 @@ function Blog() {
         </div>
       </section>
 
-      {/* Filter Section */}
       <section className="blog-filter">
         <div className="filter-container">
           <div className="filter-header">
@@ -109,9 +107,8 @@ function Blog() {
         </div>
       </section>
 
-      {/* Blog Posts Grid */}
       <section className="blog-posts">
-        <div className="blog-grid">
+        <div className="blog-grid desktop-grid">
           {filteredPosts.map((post, index) => (
             <article key={index} className="blog-card" style={{ '--accent-color': post.color }}>
               <div className="blog-image-wrapper">
@@ -135,17 +132,61 @@ function Blog() {
             </article>
           ))}
         </div>
-      </section>
 
-      {/* Newsletter Section */}
-      <section className="blog-newsletter">
-        <div className="newsletter-content">
-          <h2>Stay Updated</h2>
-          <p>Subscribe to receive the latest frontend development insights and tips</p>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email address" required />
-            <button type="submit">Subscribe</button>
-          </form>
+        <div className="mobile-marquee-wrapper">
+          <div className="marquee-row row-ltr">
+            <div className="marquee-track-inner">
+              {[...filteredPosts, ...filteredPosts].map((post, index) => (
+                <article key={index} className="blog-card marquee-card" style={{ '--accent-color': post.color }}>
+                  <div className="blog-image-wrapper">
+                    <img src={post.image} alt={post.title} className="blog-image" />
+                    <div className="blog-overlay">
+                      <button className="read-btn">Read Article</button>
+                    </div>
+                  </div>
+                  <div className="blog-card-content">
+                    <div className="blog-meta">
+                      <span className="blog-category">{post.category}</span>
+                      <span className="blog-date">{post.date}</span>
+                    </div>
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <div className="blog-footer">
+                      <span className="read-time">{post.readTime}</span>
+                      <span className="read-more">→</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="marquee-row row-rtl">
+            <div className="marquee-track-inner">
+              {[...filteredPosts, ...filteredPosts].map((post, index) => (
+                <article key={index} className="blog-card marquee-card" style={{ '--accent-color': post.color }}>
+                  <div className="blog-image-wrapper">
+                    <img src={post.image} alt={post.title} className="blog-image" />
+                    <div className="blog-overlay">
+                      <button className="read-btn">Read Article</button>
+                    </div>
+                  </div>
+                  <div className="blog-card-content">
+                    <div className="blog-meta">
+                      <span className="blog-category">{post.category}</span>
+                      <span className="blog-date">{post.date}</span>
+                    </div>
+                    <h3>{post.title}</h3>
+                    <p>{post.excerpt}</p>
+                    <div className="blog-footer">
+                      <span className="read-time">{post.readTime}</span>
+                      <span className="read-more">→</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>
